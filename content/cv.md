@@ -6,6 +6,9 @@ comments: false
 ShowToc: false
 ---
 
+<!--
+
+
 #### [Academic CV](https://pourmand1376.github.io/MyResume/academic/CirrculumVitae.pdf)
 #### [Resume](https://pourmand1376.github.io/MyResume/industry/resume.pdf)
 ---
@@ -47,3 +50,6 @@ ShowToc: false
 - Ranked 1st in the 24th Scientific Olympiads for Iranian University Students in Region 6 and Ranked 16th in the country in 2019. 
 - Offered admission to M.Sc. program in Artificial Intelligence at Yazd University as a talented undergraduate student, August 2020.
 - Ranked among the top 1 percent in the Iranian National University Entrance Exam (1896th among over 300,000 participants), June 2016. 
+
+
+-->
