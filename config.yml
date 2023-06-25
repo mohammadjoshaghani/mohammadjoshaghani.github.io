@@ -73,36 +73,34 @@ params:
 
   # home-info mode
   homeInfoParams:
-    Title: "Amir Pourmand"
+    Title: "Mohammad Joshaghani"
     Content: Welcome to my blog. Here, I will share my thoughts
 
   socialIcons:
-    - name: Farsi Site
-      url: "https://aprd.ir"
-    - name: email
-      url: "mailto:pourmand1376@gmail.com"
+    # - name: email
+    #   url: "mohammad??@gmail.com"
     - name: github
-      url: "https://github.com/pourmand1376"
+      url: "https://github.com/mohammadjoshaghani"
     - name: linkedin
-      url: "https://www.linkedin.com/in/amir-pourmand"
-    - name: stackoverflow
-      url: "https://stackoverflow.com/users/4201765"
-    - name: twitter
-      url: "https://twitter.com/_amirpourmand"
-    - name: kaggle
-      url: "https://kaggle.com/amirpourmand"
-    - name: huggingface
-      url: "https://huggingface.co/pourmand1376/"
-    - name: rss
-      url: "https://amirpourmand.ir/index.xml"
+      url: "https://www.linkedin.com/in/mohammad-joshaghani/"
+    # - name: stackoverflow
+    #   url: "https://stackoverflow.com/users/4201765"
+    # - name: twitter
+    #   url: "https://twitter.com/_amirpourmand"
+    # - name: kaggle
+    #   url: "https://kaggle.com/amirpourmand"
+    # - name: huggingface
+    #   url: "https://huggingface.co/pourmand1376/"
+    # - name: rss
+    #   url: "https://amirpourmand.ir/index.xml"
 
   analytics:
-    google:
-      SiteVerificationTag: "l6RhusmfgSX-TJDRlJA7d5bn6MknReY9_IE3ds5OyGY"
-    bing:
-      SiteVerificationTag: "XYZabc"
-    yandex:
-      SiteVerificationTag: "XYZabc"
+    # google:
+    #   SiteVerificationTag: "l6RhusmfgSX-TJDRlJA7d5bn6MknReY9_IE3ds5OyGY"
+    # bing:
+    #   SiteVerificationTag: "XYZabc"
+    # yandex:
+    #   SiteVerificationTag: "XYZabc"
 
   cover:
     hidden: true # hide everywhere but not in structured data
@@ -110,7 +108,7 @@ params:
     hiddenInSingle: true # hide on single page
 
   editPost:
-    URL: "https://github.com/pourmand1376/hugopapermod_english/tree/master/content/"
+    URL: "https://github.com/mohammadjoshaghani/mohammadjoshaghani.github.io/tree/master/content/"
     Text: "Suggest Changes" # edit text
     appendFilePath: true # to append file path to Edit link
 
