@@ -1,5 +1,5 @@
-baseURL: "https://amirpourmand.ir/"
-title: Amir Pourmand
+baseURL: "https://mohammadjoshaghani.github.io//"
+title: Mohammad Joshaghani
 paginate: 10
 theme: PaperMod
 
@@ -16,7 +16,7 @@ minify:
 
 params:
   env: production # to enable google analytics, opengraph, twitter-cards and schema.
-  title: Amir Pourmand Personal Blog
+  title: Mohammad Joshaghani Personal Website
   description: "Here, I will share my thoughts"
   keywords: [Blog, Portfolio, AmirPourmand, AI]
   author: Amir
