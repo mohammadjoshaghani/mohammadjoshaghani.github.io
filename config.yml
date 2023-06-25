@@ -136,22 +136,22 @@ menu:
       name: Search
       url: /search/
       weight: 15
-    - identifier: tags
-      name: Tags
-      url: /tags/
-      weight: 20
+    # - identifier: tags
+    #   name: Tags
+    #   url: /tags/
+    #   weight: 20
     - identifier: bio
       name: Bio
       url: /bio/
       weight: 30
-    - identifier: cv
-      name: CV
-      url: /cv/
-      weight: 40
-    - identifier: code
-      name: Code
-      url: /code/
-      weight: 50
+    # - identifier: cv
+    #   name: CV
+    #   url: /cv/
+    #   weight: 40
+    # - identifier: code
+    #   name: Code
+    #   url: /code/
+    #   weight: 50
 
 # Read: https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs#using-hugos-syntax-highlighter-chroma
 pygmentsUseClasses: true
