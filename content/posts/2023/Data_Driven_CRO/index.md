@@ -61,7 +61,7 @@ $$
 \end{equation}
 $$
 
-Given dataset $\mathcal{D}_{\xi}=\left\{\xi_1, \xi_2 \ldots \xi_N\right\}$ they suggest to minimize the corresponding loss function of one-class classification, i.e., the empirical centered total variation of the projected data points:
+Given dataset $\mathcal{D}_{\xi}=\left\lbrace\xi_1, \xi_2 \ldots \xi_N\right\rbrace$ they suggest to minimize the corresponding loss function of one-class classification, i.e., the empirical centered total variation of the projected data points:
 
 $$
 \begin{equation}
