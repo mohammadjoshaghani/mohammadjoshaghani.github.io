@@ -22,11 +22,11 @@ set of actions and a cost that depends on both the action $x$ and a random pertu
 
 In the conditional stochastic optimization problem, decision maker tries to identify optimal policy $\boldsymbol{x}^*$,  dependent on $\psi$, that is the solution to the following minimization problem:
 
-$
+$$
 \begin{equation}
 \boldsymbol{x}^*(\psi) \in \underset{x \in \mathcal{X}}{\operatorname{argmin}} \mathbb{E}[c(x, \xi) \mid \psi]
 \end{equation}
-$
+$$
 
 That is, optimal action (policy) is the one in  $\mathcal{X}$ that minimizes the expectation of cost function $c$ when $\psi$ is known.
 
