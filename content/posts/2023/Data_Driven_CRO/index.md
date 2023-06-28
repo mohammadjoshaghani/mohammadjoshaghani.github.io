@@ -46,11 +46,13 @@ Previous works exert one-class classification technique in designing uncertainty
 
 # The Deep Data-Driven Robust Optimization (DDDRO) Approach: 
 Goerigk and Kurtz, 2020 proposed using deep neural networks to create uncertainty set $\mathcal{U}$ as follow:
+
 $$
 \begin{equation}
 \mathcal{U}(W, R):=\left\{\xi \in \mathbb{R}^m:\left\|f_W(\xi)-\bar{f}_0\right\| \leq R\right\}
 \end{equation}
 $$
+
 where, $f_W: \mathbb{R}^m \rightarrow \mathbb{R}^d$ is a deep neural networks, with parameters $W$, that map random variables $\xi$ to a new representation in which uncertainty set $\mathcal{U}$ can be obtained around center $\bar{f}_0$ with radius $R$.
 
 $\bar{f}_0$ is the center of cluster, where $W_o$ represents some initial random parameters of deep neural networks:
@@ -68,6 +70,7 @@ $$
 \min _W \frac{1}{N} \sum_{i=1}^N\left\|f_W\left(\xi_i\right)-\bar{f}_0\right\|^2
 \end{equation}
 $$
+
 The design of the neural network's layers is based on a concept called constraint generation. Constraint generation is about adding filters that make a reduced uncertainty set $\mathcal{U'}$, containing worst-case loss in original set $\mathcal{U}$. Their proposed deep neural network makes uncertainty set $\mathcal{U}(W,R)$: 
 
 $$
@@ -85,6 +88,7 @@ $$
 \end{array}\right\},
 \end{equation}
 $$
+
 where $\phi^{\ell}$ is the output at $\ell$-th layer of neural networks, and $a_k^{\ell}, b_k^{\ell}, {\underline{\alpha}}_k^{\ell}, \bar{\alpha}_k^{\ell}$ are parameters that create $K$ affine pieces.
 
 # Deep Data-driven Conditional Robust Optimization:
