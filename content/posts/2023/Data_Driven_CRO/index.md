@@ -1,8 +1,10 @@
 ---
 title: Summary of the research paper "Data-Driven Conditional Robust Optimization"
-date: 2023-05-17T00:00:00.000+00:00
+date: 2023-06-27
 description: In this blog I talk about the paper "Data-Driven Conditional Robust Optimization". 
-tags: [academic]
+comments: true
+math: true
+tags: [math]
 ---
 
 # Introduction:
