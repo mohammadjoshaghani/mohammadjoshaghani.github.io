@@ -72,7 +72,7 @@ The design of the neural network's layers is based on a concept called constrain
 
 $$
 \begin{equation}
-\mathcal{U}(W, R)=\left\{\begin{array}{c}
+\mathcal{U}(W, R)=\left\lbrace\begin{array}{c}
 \xi;\begin{array}{c}
 \exists u \in\{0,1\}^{d \times K \times L}, \zeta \in \mathbb{R}^{d \times L}, \phi \in \mathbb{R}^{d \times L} \\
 \sum_{k=1}^K u_j^{k, \ell}=1, \forall j, \ell \\
@@ -82,7 +82,7 @@ $$
 \sum_{k=1}^K u_j^{k, \ell}{\underline{\alpha}}_k^{\ell} \leq \phi_j^{\ell} \leq \sum_{k=1}^K u_j^{k, \ell} \bar{\alpha}_k^{\ell}, \forall j, \ell \\
 \left\|\zeta^L-\bar{f}_0\right\| \leq R
 \end{array}
-\end{array}\right\},
+\end{array}\right\rbrace,
 \end{equation}
 $$
 where $\phi^{\ell}$ is the output at $\ell$-th layer of neural networks, and $a_k^{\ell}, b_k^{\ell}, {\underline{\alpha}}_k^{\ell}, \bar{\alpha}_k^{\ell}$ are parameters that create $K$ affine pieces.
@@ -116,7 +116,7 @@ For the first problem, authors proposed to combine loss functions of two procedu
 For the second problem, the authors of paper proposed random policy $\pi:\mathbb{R}^m \to \Delta_k$ which maps $\psi$ to a *probability simplex* $\subset \mathbb{R}^K$, i.e. $\pi := \bar{\pi}^\theta(g_v(\psi)) $, in which:
 
 $$
-\bar{\pi}_k^\theta(\psi):=\frac{\exp \left\{-\beta\left\|g_V(\psi)-\theta^k\right\|^2\right\}}{\sum_{k^{\prime}=1}^K \exp \left\{-\beta\left\|g_V(\psi)-\theta^{k^{\prime}}\right\|^2\right\}}
+\bar{\pi}_k^\theta(\psi):=\frac{\exp \left\lbrace-\beta\left\|g_V(\psi)-\theta^k\right\|^2\right\rbrace}{\sum_{k^{\prime}=1}^K \exp \left\lbrace-\beta\left\|g_V(\psi)-\theta^{k^{\prime}}\right\|^2\right\rbrace}
 $$
 
 The intuition of $\bar{\pi}_k^\theta(\psi)$ is that probability of assigning $\psi$ to a cluster is high, if the latent space of auto-encoder has a lower Euclidean norm distance to a centroid of that cluster. 
