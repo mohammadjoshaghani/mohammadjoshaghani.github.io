@@ -59,7 +59,7 @@ $\bar{f}_0$ is the center of cluster, where $W_o$ represents some initial random
 
 $$
 \begin{equation}
-\bar{f}_0:=(1 / N) \sum_{i \in[N]} f_{W_0}\left(\xi_i\right)
+\bar{f}_0:=(1 / N) \sum_{i \in[N]} f_{W_0}\left( \xi_i \right)
 \end{equation}
 $$
 
@@ -120,7 +120,9 @@ For the first problem, authors proposed to combine loss functions of two procedu
 For the second problem, the authors of paper proposed random policy $\pi:\mathbb{R}^m \to \Delta_k$ which maps $\psi$ to a *probability simplex* $\subset \mathbb{R}^K$, i.e. $\pi := \bar{\pi}^\theta(g_v(\psi)) $, in which:
 
 $$
+\begin{equation}
 \bar{\pi}_k^\theta(\psi):=\frac{\exp \left\lbrace-\beta\left\|g_V(\psi)-\theta^k\right\|^2 \right\rbrace}{\sum_{k^{\prime}=1}^K \exp \left\lbrace-\beta\left\|g_V(\psi)-\theta^{k^{\prime}}\right\|^2\right\rbrace}
+\end{equation}
 $$
 
 The intuition of $\bar{\pi}_k^\theta(\psi)$ is that probability of assigning $\psi$ to a cluster is high, if the latent space of auto-encoder has a lower Euclidean norm distance to a centroid of that cluster. 
