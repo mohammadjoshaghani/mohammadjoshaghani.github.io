@@ -49,7 +49,7 @@ Goerigk and Kurtz, 2020 proposed using deep neural networks to create uncertaint
 
 $$
 \begin{equation}
-\mathcal{U}(W, R):=\lbrace\xi \in \mathbb{R}^m:\left\|f_W(\xi)-\bar{f}_0\right\| \leq R\rbrace
+\mathcal{U}(W, R):=\left\lbrace\xi \in \mathbb{R}^m:\left\|f_W(\xi)-\bar{f}_0\right\| \leq R\right\rbrace
 \end{equation}
 $$
 
@@ -63,7 +63,7 @@ $$
 \end{equation}
 $$
 
-Given dataset $\mathcal{D}_{\xi}=\lbrace\xi_1, \xi_2 \ldots \xi_N\rbrace$ they suggest to minimize the corresponding loss function of one-class classification, i.e., the empirical centered total variation of the projected data points:
+Given dataset $\mathcal{D}_{\xi}=\left\lbrace\xi_1, \xi_2 \ldots \xi_N \right\rbrace$ they suggest to minimize the corresponding loss function of one-class classification, i.e., the empirical centered total variation of the projected data points:
 
 $$
 \begin{equation}
@@ -75,7 +75,7 @@ The design of the neural network's layers is based on a concept called constrain
 
 $$
 \begin{equation}
-\mathcal{U}(W, R)=\lbrace\begin{array}{c}
+\mathcal{U}(W, R)=\left\lbrace\begin{array}{c}
 \xi;\begin{array}{c}
 \exists u \in\{0,1\}^{d \times K \times L}, \zeta \in \mathbb{R}^{d \times L}, \phi \in \mathbb{R}^{d \times L} \\
 \sum_{k=1}^K u_j^{k, \ell}=1, \forall j, \ell \\
@@ -85,7 +85,7 @@ $$
 \sum_{k=1}^K u_j^{k, \ell}{\underline{\alpha}}_k^{\ell} \leq \phi_j^{\ell} \leq \sum_{k=1}^K u_j^{k, \ell} \bar{\alpha}_k^{\ell}, \forall j, \ell \\
 \left\|\zeta^L-\bar{f}_0\right\| \leq R
 \end{array}
-\end{array}\rbrace,
+\end{array}\right\rbrace,
 \end{equation}
 $$
 
@@ -120,7 +120,7 @@ For the first problem, authors proposed to combine loss functions of two procedu
 For the second problem, the authors of paper proposed random policy $\pi:\mathbb{R}^m \to \Delta_k$ which maps $\psi$ to a *probability simplex* $\subset \mathbb{R}^K$, i.e. $\pi := \bar{\pi}^\theta(g_v(\psi)) $, in which:
 
 $$
-\bar{\pi}_k^\theta(\psi):=\frac{\exp \lbrace-\beta\left\|g_V(\psi)-\theta^k\right\|^2\rbrace}{\sum_{k^{\prime}=1}^K \exp \lbrace-\beta\left\|g_V(\psi)-\theta^{k^{\prime}}\right\|^2\rbrace}
+\bar{\pi}_k^\theta(\psi):=\frac{\exp \left\lbrace-\beta\left\|g_V(\psi)-\theta^k\right\|^2 \right\rbrace}{\sum_{k^{\prime}=1}^K \exp \left\lbrace-\beta\left\|g_V(\psi)-\theta^{k^{\prime}}\right\|^2\right\rbrace}
 $$
 
 The intuition of $\bar{\pi}_k^\theta(\psi)$ is that probability of assigning $\psi$ to a cluster is high, if the latent space of auto-encoder has a lower Euclidean norm distance to a centroid of that cluster. 
@@ -129,7 +129,7 @@ So, the integrated loss function of IDCCC algorithm can be written as:
 
 $$
 \begin{aligned}
-& \mathcal{L}_\alpha^3\left(V, \theta,\lbrace W^k\rbrace_{k=1}^K\right):=\left(1-\alpha_S\right) \frac{1}{K} \sum_{k=1}^K \sum_{i=1}^N \frac{\bar{\pi}_k^\theta\left(g_{V_E}\left(\psi_i\right)\right)}{\sum_{i=1}^N \bar{\pi}_k^\theta\left(g_{V_E}\left(\psi_i\right)\right)}\left\|f_{W^k}\left(\xi_i\right)-\bar{f}_{W^k \mid \bar{a}\left(\psi_i\right)=k}^{\theta, V}\right\|^2 \\
+& \mathcal{L}_\alpha^3\left(V, \theta,\left\lbrace W^k\right\rbrace_{k=1}^K\right):=\left(1-\alpha_S\right) \frac{1}{K} \sum_{k=1}^K \sum_{i=1}^N \frac{\bar{\pi}_k^\theta\left(g_{V_E}\left(\psi_i\right)\right)}{\sum_{i=1}^N \bar{\pi}_k^\theta\left(g_{V_E}\left(\psi_i\right)\right)}\left\|f_{W^k}\left(\xi_i\right)-\bar{f}_{W^k \mid \bar{a}\left(\psi_i\right)=k}^{\theta, V}\right\|^2 \\
 & \quad+\alpha_S\left(\left(1-\alpha_K\right) \frac{1}{N} \sum_{i=1}^N\left\|g_{V_D}\left(g_{V_E}\left(\psi_i\right)\right)-\psi_i\right\|^2+\alpha_K \frac{1}{N} \sum_{i=1}^N \sum_{k=1}^K \bar{\pi}_k^\theta\left(g_{V_E}\left(\psi_i\right)\right)\left\|g_{V_E}\left(\psi_i\right)-\theta^k\right\|^2\right)
 \end{aligned}
 $$
