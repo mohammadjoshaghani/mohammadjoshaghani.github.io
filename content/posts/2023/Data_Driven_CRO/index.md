@@ -158,7 +158,7 @@ The paper exploits proposed approaches on two experiment, Gaussian dataset and p
 
 ![Alternate image text](simulated.PNG)
 
-As figure (a) and (c) show, when $\epsilon=10\%$, the IDCC algorithm is less conservative to create uncertainty set with regarding to benchmarks.
+As figure (a) and (c) show, when $\epsilon=$ {10%}, the IDCC algorithm is less conservative to create uncertainty set with regarding to benchmarks.
 
 # Conclusion:
 This paper proposed two algorithms to make use of contextual information to create uncertainty set for robust optimization problems. In the fist one, they suggested iteratively optimize parameters of one class classification and deep k-mean clustering algorithms to first map contextual information to lower dimensional representation with auto-encoder and then minimize total variations of proposed clusters. Second algorithm is privileged with one integrated loss function that enable it to automatically be trained on all available datasets. Then, they proposed $Var$ as risk-averse risk measure and calibration method of uncertainty's Radius for each algorithms. Their approach shows superior performance to create concise uncertainty set on Gaussian dataset and portfolio optimization dataset, considering covariate variable.
