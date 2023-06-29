@@ -55,9 +55,10 @@ where, $f_W: \mathbb{R}^m \rightarrow \mathbb{R}^d$ is a deep neural networks, w
 
 $\bar{f}_0$ is the center of cluster, where $W_o$ represents some initial random parameters of deep neural networks:
 
-```math
+<!-- $$
 \bar{f}_0 = (1 / N) \sum_{i \in[N]} f_{W_0}\left(\xi_i\right)
-```
+$$ -->
+<img src="https://latex.codecogs.com/svg.image?\color{White}%5Cbar%7Bf%7D_0%20%3D%20(1%20%2F%20N)%20%5Csum_%7Bi%20%5Cin%5BN%5D%7D%20f_%7BW_0%7D%5Cleft(%5Cxi_i%5Cright)%0D" />
 
 Given dataset $\mathcal{D}_{\xi}=\left\lbrace\xi_1, \xi_2 \ldots \xi_N\right\rbrace$ they suggest to minimize the corresponding loss function of one-class classification, i.e., the empirical centered total variation of the projected data points:
 
