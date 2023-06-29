@@ -55,20 +55,23 @@ where, $f_W: \mathbb{R}^m \rightarrow \mathbb{R}^d$ is a deep neural networks, w
 
 $\bar{f}_0$ is the center of cluster, where $W_o$ represents some initial random parameters of deep neural networks:
 
-$$
-\bar{f}_0 = (1 / N) \sum_{i \in[N]} f_{W_0}\left(\xi_i\right)
-$$
+![](f_0.svg)
+
+
 
 Given dataset $\mathcal{D}_{\xi}=\left\lbrace\xi_1, \xi_2 \ldots \xi_N\right\rbrace$ they suggest to minimize the corresponding loss function of one-class classification, i.e., the empirical centered total variation of the projected data points:
 
-$$
+<!-- $$
 \begin{equation}
 \min _W \frac{1}{N} \sum_{i=1}^N\left\|f_W\left(\xi_i\right)-\bar{f}_0\right\|^2
 \end{equation}
-$$
+$$ -->
+![](tatalv.svg)
+
+
 The design of the neural network's layers is based on a concept called constraint generation. Constraint generation is about adding filters that make a reduced uncertainty set $\mathcal{U'}$, containing worst-case loss in original set $\mathcal{U}$. Their proposed deep neural network makes uncertainty set $\mathcal{U}(W,R)$: 
 
-$$
+<!-- $$
 \begin{equation}
 \mathcal{U}(W, R)=\left\lbrace\begin{array}{c}
 \xi;\begin{array}{c}
@@ -82,7 +85,10 @@ $$
 \end{array}
 \end{array}\right\rbrace,
 \end{equation}
-$$
+$$ -->
+
+![](Set.svg)
+
 where $\phi^{\ell}$ is the output at $\ell$-th layer of neural networks, and $a_k^{\ell}, b_k^{\ell}, {\underline{\alpha}}_k^{\ell}, \bar{\alpha}_k^{\ell}$ are parameters that create $K$ affine pieces.
 
 # Deep Data-driven Conditional Robust Optimization:
@@ -113,22 +119,27 @@ For the first problem, authors proposed to combine loss functions of two procedu
 
 For the second problem, the authors of paper proposed random policy $\pi:\mathbb{R}^m \to \Delta_k$ which maps $\psi$ to a *probability simplex* $\subset \mathbb{R}^K$, i.e. $\pi := \bar{\pi}^\theta(g_v(\psi)) $, in which:
 
-$$
+<!-- $$
 \begin{equation}
 \bar{\pi}_k^\theta(\psi):=\frac{\exp \left\lbrace-\beta\left\|g_V(\psi)-\theta^k\right\|^2\right\rbrace}{\sum_{k^{\prime}=1}^K \exp \left\lbrace-\beta\left\|g_V(\psi)-\theta^{k^{\prime}}\right\|^2\right\rbrace}
 \end{equation}
-$$
+$$ -->
+
+![](pi.svg)
+
 
 The intuition of $\bar{\pi}_k^\theta(\psi)$ is that probability of assigning $\psi$ to a cluster is high, if the latent space of auto-encoder has a lower Euclidean norm distance to a centroid of that cluster. 
 
 So, the integrated loss function of IDCCC algorithm can be written as:
 
-$$
+<!-- $$
 \begin{aligned}
 & \mathcal{L}_\alpha^3\left(V, \theta,\left\{W^k\right\}_{k=1}^K\right):=\left(1-\alpha_S\right) \frac{1}{K} \sum_{k=1}^K \sum_{i=1}^N \frac{\bar{\pi}_k^\theta\left(g_{V_E}\left(\psi_i\right)\right)}{\sum_{i=1}^N \bar{\pi}_k^\theta\left(g_{V_E}\left(\psi_i\right)\right)}\left\|f_{W^k}\left(\xi_i\right)-\bar{f}_{W^k \mid \bar{a}\left(\psi_i\right)=k}^{\theta, V}\right\|^2 \\
 & \quad+\alpha_S\left(\left(1-\alpha_K\right) \frac{1}{N} \sum_{i=1}^N\left\|g_{V_D}\left(g_{V_E}\left(\psi_i\right)\right)-\psi_i\right\|^2+\alpha_K \frac{1}{N} \sum_{i=1}^N \sum_{k=1}^K \bar{\pi}_k^\theta\left(g_{V_E}\left(\psi_i\right)\right)\left\|g_{V_E}\left(\psi_i\right)-\theta^k\right\|^2\right)
 \end{aligned}
-$$
+$$ -->
+
+![](l3.svg)
 
 # Can one uses Risk-averse instead of risk-neutral measure in this approach?
 
