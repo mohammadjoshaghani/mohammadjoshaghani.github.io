@@ -74,7 +74,7 @@ params:
   # home-info mode
   homeInfoParams:
     Title: "Mohammad Joshaghani"
-    Content: Welcome to my blog. Here, I will share my thoughts
+    Content: Welcome to my website.
 
   socialIcons:
     # - name: email
